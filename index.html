@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevClub — A escola que te tira do zero e te coloca no mercado</title>
+  <meta name="description" content="Landing page conceitual da Formação DevClub: programação Full Stack, IA, carreira, mentorias e preparação para o mercado.">
+  <meta name="theme-color" content="#0D0D12">
+  <meta name="robots" content="index, follow">
+
+  <link rel="icon" type="image/png" href="assets/devclub-mark.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header__inner">
+      <a href="#topo" class="logo">
+        <img src="assets/devclub-mark.png" alt="" class="logo__img" aria-hidden="true">
+        <span class="logo__text">DevClub</span>
+      </a>
+
+      <nav class="main-nav" id="main-navigation" aria-label="Navegação principal">
+        <div class="main-nav__item has-dropdown">
+          <button class="main-nav__link" aria-expanded="false">Formações ▾</button>
+          <div class="dropdown">
+            <a href="#formacoes" data-formacao-target="full-stack">Full Stack</a>
+            <a href="#formacoes" data-formacao-target="front-end">Front-end</a>
+            <a href="#formacoes" data-formacao-target="back-end">Back-end</a>
+            <a href="#formacoes" data-formacao-target="mobile">Mobile</a>
+            <a href="#formacoes" data-formacao-target="ia">IA e Automações</a>
+          </div>
+        </div>
+        <a href="#tutores" class="main-nav__link">Tutores</a>
+        <a href="#mercado" class="main-nav__link">Mercado</a>
+        <a href="#depoimentos" class="main-nav__link">Alunos</a>
+        <a href="#podcast" class="main-nav__link">Podcast</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="https://aulas.devclub.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--student">Área do aluno <span aria-hidden="true">↗</span></a>
+        <a href="#matricula" class="btn btn--primary">Quero ser aluno</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO — animação de partículas interativa (JS) -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <canvas id="particle-canvas" class="hero__canvas" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Formação Full Stack + IA</p>
+        <h1 class="hero__title" id="hero-title">A escola que te tira do zero <br>e te coloca no mercado</h1>
+        <p class="hero__subtitle">
+          Do primeiro <code>console.log</code> ao primeiro contracheque.
+          Mentoria com quem já programou em empresas como Santander, BTG Pactual e Toro Investimentos.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#matricula" class="btn btn--primary btn--lg">Quero ser aluno</a>
+          <button class="btn btn--play" id="btn-video" type="button" aria-label="Conhecer as formações DevClub">
+            <span class="btn__play-icon" aria-hidden="true">▶️</span> Saiba mais
+          </button>
+        </div>
+
+        <p class="hero__hint">Passe o mouse ou toque na animação</p>
+      </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section class="social-proof" aria-labelledby="social-proof-title">
+      <div class="container">
+        <p class="social-proof__lead"><strong data-counter="30000">0</strong>+ alunos já passaram por aqui</p>
+        <h2 class="social-proof__sub" id="social-proof-title">Empresas onde nossos alunos foram contratados</h2>
+
+        <div class="logo-strip brand-wall" aria-label="Empresas que contrataram alunos do DevClub">
+          <span class="brand-logo brand-logo--ifood" aria-label="iFood">iFood</span>
+          <span class="brand-logo brand-logo--santander" aria-label="Santander"><span class="brand-mark">◒</span>Santander</span>
+          <span class="brand-logo brand-logo--ibm" aria-label="IBM">IBM</span>
+          <span class="brand-logo brand-logo--bradesco" aria-label="Bradesco"><span class="brand-mark">⌁</span>bradesco</span>
+          <span class="brand-logo brand-logo--accenture" aria-label="Accenture"><span class="accenture-mark">›</span>accenture</span>
+          <span class="brand-logo brand-logo--vivo" aria-label="Vivo"><span class="vivo-mark">✦</span>vivo</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAÇÕES — scroll lateral -->
+    <section class="formacoes" id="formacoes" aria-labelledby="formacoes-title">
+      <div class="container">
+        <h2 class="section-title" id="formacoes-title">Formações completas, do zero ao avançado</h2>
+        <p class="section-subtitle">Tudo que você precisa pra sair do "oi mundo" pro seu primeiro sistema em produção.</p>
+      </div>
+
+      <div class="formacoes__scroller" tabindex="0">
+        <div class="formacoes__track">
+          <div class="formacao-card" data-formacao="front-end">
+            <span class="tech-badge tech-badge--html" aria-hidden="true">5</span>
+            <h3>Front-end</h3>
+            <p>HTML5, CSS3, JavaScript, Flexbox e Grid na prática.</p>
+          </div>
+          <div class="formacao-card" data-formacao="back-end">
+            <span class="tech-badge tech-badge--node" aria-hidden="true">JS</span>
+            <h3>Back-end</h3>
+            <p>Node.js, banco de dados e APIs que aguentam usuário de verdade.</p>
+          </div>
+          <div class="formacao-card" data-formacao="full-stack">
+            <img class="formacao-card__logo formacao-card__logo--fullstack" src="assets/full-stack-logo.png" alt="Logo Full Stack: front-end e back-end integrados">
+            <h3>Full Stack</h3>
+            <p>Front e back juntos: o programador completo que o mercado procura.</p>
+          </div>
+          <div class="formacao-card" data-formacao="mobile">
+            <span class="tech-badge tech-badge--mobile" aria-hidden="true">▣</span>
+            <h3>Mobile</h3>
+            <p>Apps reais, publicados, na palma da mão dos seus usuários.</p>
+          </div>
+          <div class="formacao-card" data-formacao="ia">
+            <span class="tech-badge tech-badge--ia" aria-hidden="true">✦</span>
+            <h3>Gestor de IA</h3>
+            <p>Orquestre modelos de IA em vez de só usar prompt solto.</p>
+          </div>
+          <div class="formacao-card" data-formacao="ia">
+            <span class="tech-badge tech-badge--claude" aria-hidden="true">⌁</span>
+            <h3>Claude & Claude Code</h3>
+            <p>Programe com IA sabendo exatamente o que ela está fazendo.</p>
+          </div>
+          <div class="formacao-card" data-formacao="ia">
+            <span class="tech-badge tech-badge--n8n" aria-hidden="true">N8N</span>
+            <h3>Trilha N8N</h3>
+            <p>Automatize processos inteiros sem depender de ninguém.</p>
+          </div>
+          <div class="formacao-card" data-formacao="ingles">
+            <span class="tech-badge tech-badge--ingles" aria-hidden="true">EN</span>
+            <h3>Inglês</h3>
+            <p>Com Camille — pra você não travar numa vaga internacional por causa do idioma.</p>
+          </div>
+          <div class="formacao-card" data-formacao="cripto">
+            <span class="tech-badge tech-badge--cripto" aria-hidden="true">₿</span>
+            <h3>Como Investir em Criptomoedas</h3>
+            <p>Com Diego Velasques — educação financeira pra quem também quer fazer o dinheiro trabalhar.</p>
+          </div>
+          <div class="formacao-card" data-formacao="projetos">
+            <span class="tech-badge tech-badge--projetos" aria-hidden="true">▹</span>
+            <h3>Projetos</h3>
+            <p>Portfólio real pra sair da formação com algo pra mostrar, não só certificado.</p>
+          </div>
+          <div class="formacao-card" data-formacao="suporte">
+            <span class="tech-badge tech-badge--suporte" aria-hidden="true">⚙</span>
+            <h3>Suporte</h3>
+            <p>Time técnico de plantão pra você não travar sozinho num erro às 2h da manhã.</p>
+          </div>
+          <div class="formacao-card" data-formacao="playbooks">
+            <span class="tech-badge tech-badge--playbooks" aria-hidden="true">▤</span>
+            <h3>Playbooks DevClub</h3>
+            <p>Passo a passo prático dos processos que funcionam de verdade no dia a dia de dev.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- IA ILIMITADA -->
+    <section class="ia-ilimitada" aria-labelledby="ia-title">
+      <div class="container ia-ilimitada__inner">
+        <div class="ia-ilimitada__icons" aria-hidden="true">
+          <span class="ia-icon">GPT</span>
+          <span class="ia-icon">Claude</span>
+          <span class="ia-icon">Gemini</span>
+          <span class="ia-icon">Grok</span>
+          <span class="ia-icon">DeepSeek</span>
+        </div>
+        <h2 class="section-title" id="ia-title">Você não deveria travar no meio do aprendizado</h2>
+        <p class="section-subtitle">
+          Aqui dentro você tem acesso ilimitado às melhores IAs do mercado pra estudar,
+          praticar e construir — sem se preocupar com crédito acabando no meio da aula.
+        </p>
+        <a href="#matricula" class="btn btn--primary">Quero fazer parte</a>
+      </div>
+    </section>
+
+    <!-- ALÉM DO CÓDIGO -->
+    <section class="alem-codigo" aria-labelledby="alem-title">
+      <div class="container">
+        <h2 class="section-title" id="alem-title">Tudo que você precisa além do código pra evoluir mais rápido</h2>
+
+        <div class="beneficios-grid">
+          <article class="beneficio-card">
+            <h3>Acompanhamento semanal</h3>
+            <p>Nossa recrutadora acompanha sua evolução toda semana, de perto.</p>
+          </article>
+          <article class="beneficio-card">
+            <h3>Terapeuta de alta performance</h3>
+            <p>Porque virar programador também mexe com a cabeça — e a gente cuida disso.</p>
+          </article>
+          <article class="beneficio-card">
+            <h3>Mentorias com o mercado</h3>
+            <p>Sessões semanais com profissionais que estão trabalhando agora.</p>
+          </article>
+          <article class="beneficio-card">
+            <h3>Agentes de IA 24h</h3>
+            <p>Dúvida às 2h da manhã? Tem agente de IA te esperando.</p>
+          </article>
+          <article class="beneficio-card">
+            <h3>Suporte humano 7 dias</h3>
+            <p>Gente de verdade te respondendo, todos os dias da semana.</p>
+          </article>
+          <article class="beneficio-card">
+            <h3>Vagas exclusivas</h3>
+            <p>Portal próprio de vagas conectando você direto às oportunidades do mercado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUTORES — carrossel -->
+    <section class="tutores" id="tutores" aria-labelledby="tutores-title">
+      <div class="container">
+        <h2 class="section-title" id="tutores-title">Conheça quem vai guiar seu aprendizado</h2>
+      </div>
+
+      <div class="tutores__carousel">
+        <button class="tutores__arrow tutores__arrow--prev" type="button" aria-label="Mentor anterior">‹</button>
+
+        <div class="tutores__track" role="region" aria-label="Carrossel de mentores" tabindex="0">
+          <article class="tutor-card tutor-card--active">
+            <img class="tutor-card__photo" src="https://www.devclub.com.br/assets/mentores/rodolfo.jpg" onerror="this.onerror=null;this.src='assets/mentores/rodolfo-fallback.svg'" alt="Rodolfo Mori" loading="lazy">
+            <h3>Rodolfo Mori</h3>
+            <p class="tutor-card__role">Fundador &amp; Instrutor</p>
+            <p class="tutor-card__bio">De eletricista a programador em grandes bancos. Hoje ensina o caminho que ele mesmo fez.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="assets/mentores/andrey.jpg" onerror="this.onerror=null;this.src='assets/mentores/andrey-fallback.svg'" alt="Andrey Maia" loading="lazy">
+            <h3>Andrey Maia</h3>
+            <p class="tutor-card__role">Suporte oficial DevClub</p>
+            <p class="tutor-card__bio">Apoio próximo à comunidade, orientação prática e acompanhamento para manter o aluno avançando.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="https://www.devclub.com.br/assets/mentores/mateus.jpg" onerror="this.onerror=null;this.src='assets/mentores/mateus-fallback.svg'" alt="Mateus Nogueira, professor de IA" loading="lazy">
+            <h3>Mateus Nogueira</h3>
+            <p class="tutor-card__role">Professor de IA</p>
+            <p class="tutor-card__bio">Especialista em inteligência artificial. Ensina a usar IA como ferramenta de trabalho, não como muleta.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="https://www.devclub.com.br/assets/mentores/fernanda.jpg" onerror="this.onerror=null;this.src='assets/mentores/fernanda-fallback.svg'" alt="Fernanda Costa, recrutadora" loading="lazy">
+            <h3>Fernanda Costa</h3>
+            <p class="tutor-card__role">Recrutadora</p>
+            <p class="tutor-card__bio">Mostra como o currículo é lido, o que trava numa entrevista e o que faz o recrutador chamar.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="https://www.devclub.com.br/assets/mentores/marcio.jpg" onerror="this.onerror=null;this.src='assets/mentores/marcio-fallback.svg'" alt="Marcio, terapeuta" loading="lazy">
+            <h3>Marcio</h3>
+            <p class="tutor-card__role">Terapeuta</p>
+            <p class="tutor-card__bio">Trabalha comportamento, síndrome do impostor, comparação e os desafios de recomeçar uma carreira.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="https://www.devclub.com.br/assets/mentores/stephanie.jpg" onerror="this.onerror=null;this.src='assets/mentores/stephanie-fallback.svg'" alt="Stephanie, integrante do time DevClub" loading="lazy">
+            <h3>Stephanie</h3>
+            <p class="tutor-card__role">Time DevClub</p>
+            <p class="tutor-card__bio">Integrante do time apresentado pela DevClub na formação e no acompanhamento dos alunos.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="assets/Inglês com Camile.jpg" alt="Camile, professora de inglês" loading="lazy">
+            <h3>Camile</h3>
+            <p class="tutor-card__role">Professora de Inglês</p>
+            <p class="tutor-card__bio">Inglês aplicado à carreira, tecnologia e preparação para ampliar oportunidades profissionais.</p>
+          </article>
+          <article class="tutor-card">
+            <img class="tutor-card__photo" src="assets/Criptomoedas com Diego Velasques.jpg" alt="Diego Velasquez, professor de criptomoedas" loading="lazy">
+            <h3>Diego Velasquez</h3>
+            <p class="tutor-card__role">Criptomoedas</p>
+            <p class="tutor-card__bio">Conteúdo sobre criptomoedas, blockchain e fundamentos para compreender esse mercado digital.</p>
+          </article>
+        </div>
+
+        <button class="tutores__arrow tutores__arrow--next" type="button" aria-label="Próximo mentor">›</button>
+      </div>
+
+      <p class="tutores__note">Equipe apresentada na página oficial da formação DevClub.</p>
+    </section>
+
+    <!-- MERCADO PAGA BEM -->
+    <section class="mercado" id="mercado" aria-labelledby="mercado-title">
+      <div class="container">
+        <h2 class="section-title" id="mercado-title">O mercado paga bem?</h2>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-card__number" data-counter="61" data-suffix="%">0%</span>
+            <p>das empresas afirmam não encontrar programadores qualificados o suficiente</p>
+          </div>
+          <div class="stat-card stat-card--highlight">
+            <span class="stat-card__number" data-counter="303" data-prefix="+" data-suffix="%">+0%</span>
+            <p>de crescimento projetado para o mercado de tecnologia até 2031</p>
+          </div>
+          <div class="stat-card">
+            <span class="stat-card__number" data-counter="31" data-suffix="%">0%</span>
+            <p>ao ano — taxa média de crescimento salarial na área</p>
+          </div>
+        </div>
+
+        <figure class="salary-chart">
+          <figcaption>Programador(a) Full Stack — valores anuais</figcaption>
+          <div class="salary-chart__rows">
+            <div class="salary-row">
+              <span class="salary-row__label">Júnior</span>
+              <span class="salary-row__bar salary-row__bar--br" style="--valor: 45%">R$ 45.000</span>
+              <span class="salary-row__bar salary-row__bar--intl" style="--valor: 65%">R$ 90.000</span>
+            </div>
+            <div class="salary-row">
+              <span class="salary-row__label">Pleno</span>
+              <span class="salary-row__bar salary-row__bar--br" style="--valor: 65%">R$ 85.000</span>
+              <span class="salary-row__bar salary-row__bar--intl" style="--valor: 85%">R$ 140.000</span>
+            </div>
+            <div class="salary-row">
+              <span class="salary-row__label">Sênior</span>
+              <span class="salary-row__bar salary-row__bar--br" style="--valor: 85%">R$ 140.000</span>
+              <span class="salary-row__bar salary-row__bar--intl" style="--valor: 100%">R$ 220.000</span>
+            </div>
+          </div>
+          <div class="salary-chart__legend">
+            <span><span class="legend-dot legend-dot--br"></span> Brasil</span>
+            <span><span class="legend-dot legend-dot--intl"></span> Internacional</span>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="depoimentos" id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <h2 class="section-title" id="depoimentos-title">O que nossos alunos falam</h2>
+
+        <div class="depoimentos__grid">
+          <div class="depoimento-card">
+            <p class="depoimento-card__texto">"Entrei sem saber nada de programação e em 6 meses já estava trabalhando remoto."</p>
+            <p class="depoimento-card__autor">— Aluno(a) DevClub</p>
+          </div>
+          <div class="depoimento-card">
+            <p class="depoimento-card__texto">"O suporte humano faz toda diferença quando você trava numa dúvida às 23h."</p>
+            <p class="depoimento-card__autor">— Aluno(a) DevClub</p>
+          </div>
+          <div class="depoimento-card">
+            <p class="depoimento-card__texto">"As mentorias com quem já tá no mercado mudaram completamente minha forma de estudar."</p>
+            <p class="depoimento-card__autor">— Aluno(a) DevClub</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PODCAST DEVCLUB -->
+    <section class="podcast" id="podcast" aria-labelledby="podcast-title">
+      <div class="container">
+        <h2 class="section-title" id="podcast-title">Ouça o DevClub Podcast</h2>
+        <p class="section-subtitle">
+          Papo direto sobre disciplina, imediatismo e o que realmente separa quem consegue
+          a primeira vaga de quem desiste no meio do caminho.
+        </p>
+
+        <div class="podcast__grid">
+          <div class="podcast-card">
+            <iframe
+              class="podcast-card__frame"
+              src="https://open.spotify.com/embed/episode/02B0SKn0ncI38ysblB73he?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Episódio do DevClub Podcast"
+            ></iframe>
+          </div>
+          <div class="podcast-card">
+            <iframe
+              class="podcast-card__frame"
+              src="https://open.spotify.com/embed/episode/15soSGB9XFDVHEYzZDexSU?utm_source=generator&theme=0"
+              width="100%"
+              height="152"
+              frameborder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="Episódio do DevClub Podcast"
+            ></iframe>
+          </div>
+        </div>
+
+        <a href="https://open.spotify.com/show/0cZZBo8SbFU8lNmqwYwipe" target="_blank" rel="noopener" class="podcast__link">
+          Ver todos os episódios no Spotify →
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final" id="matricula" aria-labelledby="matricula-title">
+      <canvas id="halo-canvas" class="cta-final__canvas" aria-hidden="true"></canvas>
+      <div class="container cta-final__content">
+        <h2 id="matricula-title">Seu primeiro emprego como dev começa aqui</h2>
+        <p>Preencha sua aplicação e dê o primeiro passo pra sair do zero.</p>
+        <a href="https://go.rodolfomori.com.br/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg">Fazer minha aplicação <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/devclub-mark.png" alt="" class="logo__img" aria-hidden="true">
+        <span class="logo__text">DevClub</span>
+        <p>Formando programadores prontos pro mercado, desde o primeiro dia.</p>
+      </div>
+
+      <div class="footer__col">
+        <h3>Produto</h3>
+        <a href="#formacoes">Formações</a>
+        <a href="#tutores">Tutores</a>
+        <a href="#mercado">Mercado</a>
+      </div>
+      <div class="footer__col">
+        <h3>DevClub</h3>
+        <a href="https://www.devclub.com.br/" target="_blank" rel="noopener noreferrer">Site oficial</a>
+        <a href="https://aulas.devclub.com.br/" target="_blank" rel="noopener noreferrer">Área do aluno</a>
+        <a href="https://blog.devclub.com.br/" target="_blank" rel="noopener noreferrer">Blog</a>
+      </div>
+      <div class="footer__col">
+        <h3>Projeto</h3>
+        <a href="#topo">Voltar ao topo</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#matricula">Matrícula</a>
+      </div>
+    </div>
+
+    <div class="container footer__bottom">
+      <p>© 2026 DevClub. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="particles.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>
